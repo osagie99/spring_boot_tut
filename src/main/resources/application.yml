@@ -1,0 +1,67 @@
+server:
+    port: 8000
+spring:
+    profiles:
+        active: dev
+
+    jpa:
+        open-in-view: false
+
+
+---
+
+spring:
+    datasource:
+        password: OSAgie123*>
+        url: jdbc:mysql://localhost:3306/dcbapp
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    config:
+        activate:
+            on-profile: dev
+welcome:
+    message: '"API"'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+---
+
+spring:
+    datasource:
+        password: OSAgie123*>
+        url: jdbc:mysql://localhost:3306/dcbapp-qa
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    config:
+        activate:
+            on-profile: qa
+welcome:
+    message: '"Hello and Welcome to my API"'
+
+---
+
+spring:
+    datasource:
+        password: OSAgie123*>
+        url: jdbc:mysql://localhost:3306/dcbapp-prod
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    config:
+        activate:
+            on-profile: prod
+welcome:
+    message: '"Hello and Welcome to my API"'
