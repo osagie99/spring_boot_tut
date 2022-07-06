@@ -12,9 +12,9 @@ spring:
 
 spring:
     datasource:
-        password: OSAgie123*>
-        url: jdbc:mysql://localhost:3306/dcbapp
-        username: root
+        password: ${MYSQL_ROOT_PASSWORD}
+        url: jdbc:mysql://${MYSQL_HOST}/dcbapp-qa
+        username: ${MYSQL_ROOT_USERNAME}
     jpa:
         hibernate:
             ddl-auto: update
@@ -53,9 +53,9 @@ welcome:
 
 spring:
     datasource:
-        password: OSAgie123*>
-        url: jdbc:mysql://localhost:3306/dcbapp-prod
-        username: root
+        password: ${MYSQL_ROOT_PASSWORD}
+        url: jdbc:mysql://${MYSQL_HOST}/dcbapp-qa
+        username: ${MYSQL_ROOT_USERNAME}
     jpa:
         hibernate:
             ddl-auto: update
